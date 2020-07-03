@@ -1,0 +1,16 @@
+:root {
+  --color-day-bg: #0984e3;
+  --color-day-icon: #ffe4a1;
+  --color-night-bg: #032b43;
+  --color-night-icon: #b9c6d3;
+  --color-light: #ffffff;
+  --color-dark: #4a4a4a;
+  --color-shadow-light: rgba(48, 48, 48, 0.15);
+  --color-shadow-mid: rgba(0, 0, 0, 0.25);
+  --color-shadow-dark: rgba(0, 0, 0, 0.9);
+}
+
+body{
+background-color: var(--color-dark)
+}
+
