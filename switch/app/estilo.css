@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
 :root {
   --color-day-bg: #0984e3;
   --color-day-icon: #ffe4a1;
@@ -14,26 +16,58 @@ body{
 background-color: var(--color-light)
 }
 
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
 .wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 300px;
+  height: 100vh;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .switch_container {
-  width: 70px;
+
   background-color: var( --color-day-bg) ;
+
   display: flex;
   border-radius: 50px;
   align-items: center;
-  justify-content: flex-end;
-  transition: all 1.5s;
-  padding: 3px;
+  justify-content: flex-start;
+  transition: all .8s;
+  padding: 2px;
 }
 
 .ball{
   width: 30px;
   height: 30px;
-  background-color:var(--color-day-icon) ;
+  background-color:var(--color-light) ;
+  border: solid var(--color-light) 4px;
   border-radius: 50px;
-  margin: 0 5px ;
+  margin: 3px;
+  outline: none;
+  pointer-events: none;
+  box-shadow: var(  --color-shadow-light);
+} 
+.ball:focus {
+  box-shadow: inset 0px 0px 0px 3px var(--color-dark)
+}
+
+.moon {
+  fill: var(--color-night-icon);
+  margin: 0 13px 0 5px ;
+}
+
+.sun {
+  fill: var(--color-day-icon);
+  margin: 0 5px 0 13px ;
+}
+
+.hide {
+  display: none;
 }
