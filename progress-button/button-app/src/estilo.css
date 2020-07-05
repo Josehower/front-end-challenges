@@ -1,0 +1,87 @@
+:root {
+    --color-primary: #21223e;
+    --color-primary-light: #3c3f73;
+    --color-success: #0c8d87;
+    --color-error: #c01332;
+    --color-light: #ffffff;
+  }
+
+input:focus,
+select:focus,
+textarea:focus,
+button,
+button:focus {
+    outline: none;
+    border: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 15px;
+    font-weight: 900;
+
+}
+
+.container {
+    margin: 0 auto;
+    background-color: var(--color-primary);  
+    width: 18rem;
+    margin-top: calc(50vh - 5rem);
+    position: relative;
+    border-radius: 10px;
+   
+}
+
+.progress{
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    position: relative;
+    font-size: 1.8rem;
+    color: var(--color-light);
+    vertical-align: middle;
+    z-index: 0;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+.progress::before {
+    content: "";
+    color: var(--color-light);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: calc(var(--width, 0) * 1%);
+    max-width: 100%;
+    background-color: var(--color-primary-light);
+    z-index: -1;
+    border-radius: 10px;
+
+}
+
+
+
+.error{
+    background-color: var(--color-error);
+}
+
+.success{
+    background-color: var(--color-success);
+}
+
+.icon, .icon:focus{
+    fill: white;
+    outline: none;
+    vertical-align: -4px;
+    width: 1.8rem;
+    height: 1.8rem;
+}
