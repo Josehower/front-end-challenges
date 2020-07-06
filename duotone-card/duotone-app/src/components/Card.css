@@ -1,0 +1,102 @@
+:root {
+    --color-pink: #faa7ed;
+    --color-navy: #0c1f72;
+    --color-navy-opaque: rgba(6, 0, 79, 0.77);
+    --color-light: #ffffff;
+    --color-dark: #252525;
+  }
+
+.cardDiv{
+    display: grid;
+    justify-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.colorFilter{
+    position: absolute;
+    opacity: 1;
+    min-width: 280px;
+    height: 310px;
+    transition: opacity 1s;
+
+}
+
+.colorFilter::before{
+    content: "";
+    position: absolute;
+    background-color: var(--color-pink);
+    mix-blend-mode: color;
+    min-width: 280px;
+    height: 310px;
+    grid-area: 1;
+    z-index: 1;
+    transition: opacity 1s;
+
+}
+
+.colorFilter::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color-navy);
+    mix-blend-mode: lighten;
+    min-width: 280px;
+    height: 310px;
+    grid-area: 1;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+
+.simbolo{
+    position: absolute;
+    opacity: 0;
+    width: 3rem;
+    height: 3rem;
+    bottom: 2%;
+    right: 10%;
+    fill:white;
+    z-index: 3;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+
+.colorFilter:hover + .simbolo{
+    opacity: 1;
+}
+
+.colorFilter:hover:before, .colorFilter:hover:after{
+    opacity: 0;
+} 
+
+.cardImage{
+    min-width: 280px;
+    height: 310px;
+    object-fit: cover;
+    grid-area: 1;
+    position: relative;
+
+}
+
+
+.etiqueta{
+    background-color:var( --color-navy-opaque);
+    grid-area: 1;
+    bottom: 0;
+    position: absolute;
+    min-width: 280px;
+    height: 20%;
+    color: white;
+    font-size: 15px;
+    pointer-events: none;
+    z-index: 2;
+    
+
+}
+
+.etiqueta > h2,.etiqueta > h3 {
+margin: 0;
+padding: 3px 9px;
+}
+
